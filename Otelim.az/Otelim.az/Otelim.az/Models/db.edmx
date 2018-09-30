@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_A3EC45_otelimazModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Information">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="facebook" Type="nvarchar" MaxLength="100" />
+          <Property Name="instagram" Type="nvarchar" MaxLength="100" />
+          <Property Name="telephone" Type="nvarchar" MaxLength="30" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="location" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="titleContent" Type="nvarchar" MaxLength="150" />
+          <Property Name="titleImage" Type="nvarchar" MaxLength="120" />
+          <Property Name="content" Type="nvarchar(max)" />
+          <Property Name="column" Type="nvarchar" MaxLength="10" />
+          <Property Name="publishdate" Type="date" />
+          <Property Name="mainImage" Type="nchar" MaxLength="120" />
+        </EntityType>
+        <EntityContainer Name="DB_A3EC45_otelimazModelStoreContainer">
+          <EntitySet Name="Information" EntityType="Self.Information" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_A3EC45_otelimazModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Information">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="instagram" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="telephone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="location" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DB_A3EC45_otelimazEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Information" EntityType="Self.Information" />
+          <EntitySet Name="News" EntityType="DB_A3EC45_otelimazModel.News" />
+        </EntityContainer>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="titleContent" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="titleImage" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="column" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="publishdate" Type="DateTime" Precision="0" />
+          <Property Name="mainImage" Type="String" MaxLength="120" FixedLength="true" Unicode="true" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_A3EC45_otelimazModelStoreContainer" CdmEntityContainer="DB_A3EC45_otelimazEntities">
+          <EntitySetMapping Name="Information">
+            <EntityTypeMapping TypeName="DB_A3EC45_otelimazModel.Information">
+              <MappingFragment StoreEntitySet="Information">
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="facebook" ColumnName="facebook" />
+                <ScalarProperty Name="instagram" ColumnName="instagram" />
+                <ScalarProperty Name="telephone" ColumnName="telephone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="DB_A3EC45_otelimazModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="mainImage" ColumnName="mainImage" />
+                <ScalarProperty Name="publishdate" ColumnName="publishdate" />
+                <ScalarProperty Name="column" ColumnName="column" />
+                <ScalarProperty Name="titleImage" ColumnName="titleImage" />
+                <ScalarProperty Name="titleContent" ColumnName="titleContent" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

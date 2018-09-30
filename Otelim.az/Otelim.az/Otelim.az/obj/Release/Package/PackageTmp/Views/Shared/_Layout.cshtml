@@ -1,0 +1,213 @@
+﻿@using Otelim.az.Models;
+@using Otelim.az.VIewModel;
+@model VModel
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Otelim.az - Axtarmaq indi daha #rahat</title>
+    <link rel="icon" href="~/Public/images/brand/littleicon.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora&text=%21%22%23%24%25%26%27%28%29%30+,-./0123456789:;%3C=%3E%3F@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`%E2%82%AC„‘’“”™©®°µ±÷abcdefghijklmnopqrstuvwxyz{|}~%C3%9C%C3%96%C4%9E%C4%B0%C6%8F%C3%87%C5%9E%C3%BC%C3%B6%C4%9F%C4%B1%C9%99%C3%A7%C5%9F" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&text=%21%22%23%24%25%26%27%28%29%30+,-./0123456789:;%3C=%3E%3F@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`%E2%82%AC„‘’“”™©®°µ±÷abcdefghijklmnopqrstuvwxyz{|}~%C3%9C%C3%96%C4%9E%C4%B0%C6%8F%C3%87%C5%9E%C3%BC%C3%B6%C4%9F%C4%B1%C9%99%C3%A7%C5%9F" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link href="~/Public/css/defaults.css" rel="stylesheet" />
+    <link href="~/Public/css/toogleNav.css" rel="stylesheet" />
+    <link href="~/Public/css/mediaQueries.css" rel="stylesheet" />
+    <link href="~/Public/css/mystyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar  navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="/Home/Index">
+                    <img class="mr-1" src="/Public/images/brand/logoMain.png" width="120" height="35" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon4"><span></span><span></span><span></span></div>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active ml-4 firstnav">
+                            <a class="nav-link" href="#">Otellər <span id="chevronright"> <i class="fa fa-caret-right"></i></span></a>
+                            <ul class="nav-link-hover">
+                                <li>
+                                    <a href="#">Ölkədaxili otellər</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xarici otellərər</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Turlar <span id="chevronright"> <i class="fa fa-caret-right"></i></span></a>
+                            <ul class="nav-link-hover">
+                                <li>
+                                    <a href="#">Ölkədaxili turlar</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xarici turlər</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Mənzillər</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kampaniyalar</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 float-left">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a data-toggle="modal" data-target="#singIn" class="nav-link" href="#">Daxil ol <i class="fas fa-sign-in-alt"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="modal" data-target="#register" class="nav-link" href="#">Qeydiyyat <i class="fas fa-key"></i></a>
+                            </li>
+                        </ul>
+                    </form>
+                    <!--Login Modal -->
+                    <div class="modal fade" id="singIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div style="background-color:#00bdbb" class="modal-header ">
+                                    <img src="~/Public/images/brand/logoMain.png" width="150" />
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body p-4">
+                                    <div class="row">
+                                        <div class="col-md-7 xsnone">
+                                            <img width="100%" height="100%" src="~/Public/images/imgload.gif" data-src="/Public/images/Log/rsz_design_3.jpg" class="loader" />
+                                        </div>
+                                        <div class="col-md-5 col-xs-12">
+                                            <h5 class="text-center pb-3">Daxil ol</h5>
+                                            <label for="logemail">Email :</label>
+                                            <input id="logemail" name="email" type="email" placeholder="example@mail.com" class="form-control" />
+                                            <label class="pt-2" for="logpassword">Password :</label>
+                                            <input id="logpassword" name="password" type="password" placeholder="********" class="form-control" />
+                                            <div class="text-right pt-3">
+                                                <span><a style="color:#00bdbb" href="#">Forget password <i class="fas fa-key pl-1"></i> </a></span>
+                                            </div>
+                                            <div class="text-right">
+                                                <button type="button" id="login" class="btn btn-info mt-5">Daxil ol</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Register Modal -->
+                    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div style="background-color:#00bdbb" class="modal-header ">
+                                    <img src="~/Public/images/brand/logoMain.png" width="150" />
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body p-4">
+                                    <div class="row">
+                                        <div class="col-md-7 xsnone">
+                                            <img width="100%" height="450" src="~/Public/images/imgload.gif" data-src="/Public/images/Log/rsz_design_6.jpg" class="loader" />
+                                        </div>
+                                        <div class="col-md-5 col-xs-12">
+                                            <h5 class="text-center">Qeydiyyat</h5>
+                                            <label for="regfullName">Ad , Soyad:</label>
+                                            <input id="regfullName" class="form-control" name="fullName" placeholder="Full Name"/>
+                                            <label class="pt-2" for="regemail">Email :</label>
+                                            <input id="regemail" name="email" type="email" placeholder="example@mail.com" class="form-control" />
+                                            <label class="pt-2" for="regpassword">Password :</label>
+                                            <input id="regpassword" name="password" type="password" placeholder="********" class="form-control" />
+                                            <label class="pt-2" for="conPassword">Confirm Password</label>
+                                            <input type="password" id="conPassword" class="form-control" name="conPassword" placeholder="********"/>
+                                            <select class="mt-4 custom-select">
+                                                <option>İstifadəçi</option>
+                                                <option>Otel nümayəndəsi</option>
+                                            </select>
+                                            <div class="text-right">
+                                                <button type="button" id="register" class="btn btn-info mt-3">Qeydiyyat</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+
+    @RenderBody()
+
+    <footer>
+        <div class="container">
+            <div class="row py-5">
+                <div class="footerBrand col-lg-3 col-md-6 col-sm-12 text-center mt-5">
+                    <a href="/Home/Index">
+                        <img width="120" height="35" src="~/Public/images/brand/logoMain.png" />
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
+                    <ul>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i>Otellər</a></li>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i>Turlar</a></li>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i>Mənzillər</a></li>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i>Kampaniyalar</a></li>
+                    </ul>
+                    <hr />
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
+                    <ul>
+                        <li><a href="/news/index"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i> Xəbərlər</a></li>
+                        <li><a href="/about/index"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i> Haqqımızda</a></li>
+                        <li><a href="/terms/index"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i> Hüquqi Məlumat</a></li>
+                        <li><a href="/contact/index"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i> Bizimlə əlaqə</a></li>
+                    </ul>
+                    <hr />
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
+                    <ul class="pb-1">
+                        <li class="ml-5">
+                            <a target="_blank" href="@Model.information.facebook"><i class="fab fa-facebook fa-2x mr-3"></i></a>
+                            <a target="_blank" href="@Model.information.instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone pr-3 my-2"></i>@Model.information.telephone
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope-open pr-3"></i>@Model.information.email
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+    <script src="~/Public/js/mediaQueries.js"></script>
+    <script src="~/Public/js/slider.js"></script>
+    <script src="~/Public/js/main.js"></script>
+</body>
+
+</html>

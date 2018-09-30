@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A3EC45_otelimazModelStoreContainer" CdmEntityContainer="DB_A3EC45_otelimazEntities">
+    <EntitySetMapping Name="Information">
+      <EntityTypeMapping TypeName="DB_A3EC45_otelimazModel.Information">
+        <MappingFragment StoreEntitySet="Information">
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="facebook" ColumnName="facebook" />
+          <ScalarProperty Name="instagram" ColumnName="instagram" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="DB_A3EC45_otelimazModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="mainImage" ColumnName="mainImage" />
+          <ScalarProperty Name="publishdate" ColumnName="publishdate" />
+          <ScalarProperty Name="column" ColumnName="column" />
+          <ScalarProperty Name="titleImage" ColumnName="titleImage" />
+          <ScalarProperty Name="titleContent" ColumnName="titleContent" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

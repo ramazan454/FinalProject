@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Otelim.az - Axtarmaq indi daha #rahat</title>
+    <link rel="icon" href="~/Public/images/brand/littleicon.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&text=%21%22%23%24%25%26%27%28%29%30+,-./0123456789:;%3C=%3E%3F@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`%E2%82%AC„‘’“”™©®°µ±÷abcdefghijklmnopqrstuvwxyz{|}~%C3%9C%C3%96%C4%9E%C4%B0%C6%8F%C3%87%C5%9E%C3%BC%C3%B6%C4%9F%C4%B1%C9%99%C3%A7%C5%9F" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Public/css/mystyle.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="/Home/Index">
+                    <img class="mr-1" src="/Public/images/brand/logoMain.png" width="120" height="35" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon4"><span></span><span></span><span></span></div>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Otellər
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Yerli Otellər</a>
+                                <a class="dropdown-item" href="#">Xarici Otellər</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Turlar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kampaniyalar</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Daxil ol
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Istifadəçi</a>
+                                <a class="dropdown-item" href="#">Otel Nümayəndəsi</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Qeydiyyatdan
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Istifadəçi</a>
+                                <a class="dropdown-item" href="#">Otel Nümayəndəsi</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 float-left">
+                        <input class="searchheader form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    @RenderBody()
+
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="footerBrand col-lg-3 col-md-6 col-sm-12 text-center mt-5">
+                    <a href="/Home/Index">
+                        <img width="120" height="35" src="~/Public/images/brand/logoMain.png" />
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
+                    <ul>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i>Yerli Otellər</a></li>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i>Xarici Otellər</a></li>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i>Turlar</a></li>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i>Kampaniyalar</a></li>
+                    </ul>
+                    <hr />
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
+                    <ul>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i> Haqqımızda</a></li>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i> Xəbərlər</a></li>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i> Hüquqi Məlumat</a></li>
+                        <li><a href="#"><i style="font-size: 0.7em;" class="fas fa-chevron-right mr-1"></i> Bizimlə əlaqə</a></li>
+                    </ul>
+                    <hr />
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
+                    <ul class="pb-1">
+                        <li class="ml-5">
+                            <a target="_blank" href="https://www.facebook.com/otelim.az/"><i class="fab fa-facebook fa-2x mr-3"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/otelimaz/"><i class="fab fa-instagram fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone pr-3 my-2"></i>(055)-961-7777
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope-open pr-3"></i>info@otelim.az
+                        </li>
+                    </ul>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+    <script src="~/Public/js/main.js"></script>
+</body>
+
+</html>

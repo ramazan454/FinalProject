@@ -1,0 +1,31 @@
+﻿@using Otelim.az.Models;
+@using Otelim.az.VIewModel;
+@model VModel
+@{
+    News news = @ViewBag.news;
+    ViewBag.Title = "Index";
+}
+
+<div style="height:1000px;" class="none"></div>
+<div class="container-fluid news px-0">
+    <img width="100%" height="100%" mobile-src="/Public/images/news/mobile design (3).jpg"
+         src="/Public/images/news/design (3).jpg" />
+    <div class="newslayout position-absolute"></div>
+    <div style="color:white;" class="position-absolute paper row p-3">
+        <div class="newsfont">
+            <img class="loader telephonenews" width="100%" height="400" data-src="/Public/images/news/newspictures/@news.mainImage" src="~/Public/images/imgload.gif" />
+            <p class="text-center py-2">
+                @news.titleContent
+            </p>
+            <p>@news.content</p>
+            <div class="d-flex justify-content-between py-5 aboutnews">
+                <div>
+                    <a style="color:#4effd2;" href="/news/index">Geriyə</a>
+                </div>
+                <div>
+                    <a style="color:#4effd2;" href="/news/read/@(news.Id+1)">Növbəti<i style="font-size:0.7em;" class="fas fa-chevron-right p-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

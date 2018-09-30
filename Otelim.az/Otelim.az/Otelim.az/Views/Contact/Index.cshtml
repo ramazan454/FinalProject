@@ -1,0 +1,59 @@
+﻿@using Otelim.az.Models;
+@using Otelim.az.VIewModel;
+@model VModel
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container">
+    <div style="color:black;" class="row my-5 contact">
+        <div class="col-md-7 col-xs-12 ">
+            <img class="loader" src="~/Public/images/imgload.gif" class="loader" width="100%" height="850" data-src="/Public/images/contact/logo (1).png" />
+        </div>
+        <div class="col-md-5 col-xs-12 pt-0 pb-3 px-3">
+            <h3 class="text-center">Bizimlə əlaqə :</h3>
+            <div class="col-12"><p>Günün 24 saatı xidmətinizdə! Tez bir zamanda əlaqə saxlayın...</p></div>
+            <div class="col-12">Ünvan : <span class="pl-3">@Model.information.location </span></div>
+            <div class="col-12">Email :<span class="pl-3">  @Model.information.email</span></div>
+            <div class="col-12">Telefon :<span class="pl-3">  @Model.information.telephone</span></div>
+            <div class="col-12">Şəhər telefonu :<span class="pl-3">  +994 (12) 502 11 22</span></div>
+            <div class="col-12 pt-5">
+                <h3 class="text-center">Bizə yazın :</h3>
+                <h6 class="pb-3">Saytımızdan razısınız mı? Bütün təklif və şikayətlərinizi nəzərə alırıq və günün 24 saatını sizin xidmətinizdə çalışırıq!</h6>
+                <form method="post">
+                    <label for="fullName">Ad, Soyad:</label>
+                    <input placeholder="Adınız Soyadınız" id="fullName" type="text" name="fullName" class="form-control" />
+                    <label class="pt-3" for="email">Email:</label>
+                    <input placeholder="Email" id="email" type="email" name="email" class="form-control" />
+                    <label for="telephone" class="pt-3">Telefon Nömrəniz:</label>
+                    <div class="row">
+                        <div class="col-3 pr-0">
+                            <input disabled class="form-control" value="+994" />
+                        </div>
+                        <div class="col-3 pr-0">
+                            <select class="form-control">
+                                <option>-</option>
+                                <option value="55">55</option>
+                                <option value="50">50</option>
+                                <option value="51">51</option>
+                                <option value="70">70</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <input placeholder="Nömrəniz" id="telephone" name="telephone" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <label for="message" class="pt-3">İsmarıc</label>
+                    <textarea class="form-control" placeholder="İsmarıc" rows="5" name="message"></textarea>
+                </form>
+                <button class="btn btn-block btn-info mt-3 btnloc">Göndər </button>
+            </div>
+        </div>
+    </div>
+    <div class="text-right">
+        <button class="btn btn-info btnlocation mb-3">Xeritede Goster</button>
+    </div>
+    <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.2906006117137!2d49.80279831523518!3d40.33589906847582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDIwJzA5LjIiTiA0OcKwNDgnMTguMCJF!5e0!3m2!1sru!2s!4v1535890353713&zoom=18" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+</div>
